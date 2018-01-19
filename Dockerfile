@@ -6,5 +6,5 @@ RUN ln -s /usr/include/locale.h /usr/include/xlocale.h
 RUN pip3 install numpy scipy pandas matplotlib openpyxl
 RUN wget https://www.cog-genomics.org/static/bin/plink${PLINKVER}/plink_linux_x86_64.zip && \
     unzip plink_linux_x86_64.zip -d /usr/local/bin && \
-    rm plink_linux_x86_64.zip && \
+    rm plink_linux_x86_64.zip /usr/local/bin/toy.ped /usr/local/bin/toy.map /usr/local/bin/LICENSE && \
     chmod a+x /usr/local/bin/plink
